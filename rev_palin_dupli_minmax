@@ -1,0 +1,49 @@
+function reverse(str){
+  return str.split("").reverse().join("");
+}
+console.log(reverse("hello world"));
+
+
+/*--------------------------------------------*/
+
+
+function isplind(str){
+  let n=str.length;
+  let i=0;
+  let j=n-1;
+  while(i<j && str[i]==str[j]){
+    i++;
+    j--;
+  }
+  return i>=j;
+}
+console.log(isplind("aabaa"));
+
+
+/*------------------------------------------------*/
+
+
+function removdup(array){
+  return [...new Set(array)];
+}
+const array=['a','b','a','c'];
+console.log(removdup(array));
+
+
+/*-------------------------------------------------*/
+
+
+function minmax(arr){
+  return{
+    min: Math.min(...arr),
+    max: Math.max(...arr)
+  } 
+}
+const arr=[5,7,6,9,8];
+console.log(minmax(arr));
+
+
+/*----------------------------------------------------------*/
+
+
+
