@@ -1,0 +1,32 @@
+/*------------------------------------------------------------html---------------------------------------------------------------*/
+
+<div id="root"></div>
+
+
+/*--------------------------------------------------------css----------------------------------------------------------------------------*/
+
+div {
+  padding: 10px;
+}
+button {
+  margin: 0 5px;
+}
+
+
+
+
+/*--------------------------------------------------------------JS Babel---------------------------------------------------------------*/
+
+function App() {
+  const [inputValue, setInputValue] = React.useState("");
+
+  return (
+    <>
+      <h3>Disable Button Challenge</h3>
+      <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+      <button disabled={inputValue === ""}>Submit</button>
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
